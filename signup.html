@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | AdminFlow</title>
+    <title>Signup</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
         href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
@@ -12,16 +12,20 @@
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    /> 
-</head> 
+    />
+
+</head>
 <body>
         <div class="flex items-center justify-center h-screen overflow-hidden bg-gray-100 animate__animated animate__fadeIn">
+
             <div class="flex items-center flex-col lg:flex-row">
+
                 <img 
                     src="./images/login.jpg" 
                     alt="login-image" 
-                    class=" lg:rounded-xl lg:w-[800px] w-full object-cover lg:h-auto w-full animate__animated animate__slideInLeft"
+                    class="lg:rounded-xl lg:w-[1020px] w-full object-cover lg:h-auto animate__animated animate__slideInLeft"
                 />
+
                 <div class="animate__animated animate__slideInRight py-12 px-8 bg-white rounded-xl lg:w-[580px] relative lg:-left-40 shadow-xl border border-gray-100 space-y-6">
                     <div class="flex items-center gap-4 justify-center">
                         <img 
@@ -31,52 +35,72 @@
                         />
                         <h1 class="lg:text-4xl text-3xl font-bold">S.P. International School</h1>
                     </div>
- 
-                    <form onsubmit="login(event)" class="space-y-6">
-                        <div class="border-b border-slate-300 flex items-center gap-2">
-                            <i class="ri-user-3-line text-lg text-slate-400"></i>
+
+                    <form onsubmit="signup(event)" class="space-y-6">
+
+                        <div class="border-b border-slate-300 flex items-center gap-3">
+                            <i class="ri-user-3-line text-lg text-slate-400 mt-[2px]"></i>
                             <input 
-                                type="email" 
+                                type="text"
+                                id="fullname" 
                                 class="flex-1 focus:outline-none rounded-lg py-2 placeholder-slate-400" 
-                                placeholder="email@example.com" 
-                                name="email"
-                                id="email"
+                                placeholder="Full name" 
+                                name="fullname"
                                 required
                             />
                         </div>
 
-                        <div class="border-b border-slate-300 flex items-center gap-2">
-                            <i class="ri-lock-line text-lg text-slate-400"></i>
+                        <div class="border-b border-slate-300 flex items-center gap-3">
+                            <i class="ri-phone-line text-lg text-slate-400 mt-[3px]"></i>
+                            <input 
+                                type="number" 
+                                id="mobile-number" 
+                                class="flex-1 focus:outline-none rounded-lg py-2 placeholder-slate-400" 
+                                placeholder="Mobile number" 
+                                name="mobileNumber"
+                                required
+                            />
+                        </div>
+
+                        <div class="border-b border-slate-300 flex items-center gap-3">
+                            <i class="ri-mail-line text-lg text-slate-400 mt-[3px]"></i>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                class="flex-1 focus:outline-none rounded-lg py-2 placeholder-slate-400" 
+                                placeholder="email@example.com" 
+                                name="email"
+                                required
+                            />
+                        </div>
+
+                        <div class="border-b border-slate-300 flex items-center gap-3">
+                            <i class="ri-lock-line text-lg text-slate-400 mt-[2px]"></i>
                             <input 
                                 type="password" 
+                                id="password" 
                                 class="flex-1 focus:outline-none rounded-lg py-2 placeholder-slate-400" 
                                 placeholder="********" 
                                 name="password"
-                                id="password"
                                 required
                             />
                         </div>
 
                         <button class="mt-6 py-2.5 bg-linear-65 from-cyan-400 to-indigo-800 w-full cursor-pointer text-lg font-medium text-white rounded hover:shadow-xl">
                             <i class="ri-login-circle-line mr-2"></i>
-                            Sign in
+                            Sign up
                         </button>
                     </form>
 
                     <div class="flex items-center gap-2">
-                        <p class="text-gray-500">Don't have an account?</p>
-                        <a 
-                            href="signup.html" 
-                            class="text-indigo-400 hover:underline font-medium"
-                        >
-                            Register now
-                        </a>
+                        <p class="text-gray-500">Already have an account?</p>
+                        <a href="./login.html" class="text-indigo-400 hover:underline font-medium">Login</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <script src="./script/common.js"></script>
-        <script src="./script/login.js"></script>
+    <script src="./script/common.js"></script>    
+    <script src="./script/signup.js"></script>    
 </body>
 </html>
