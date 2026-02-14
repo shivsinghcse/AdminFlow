@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students | AdminFlow</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+        rel="stylesheet"
+    /> 
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="../style/common.css" />
+
+</head>
+<body>
+    <aside id="sidenav" class="fixed top-0 left-0 w-[180px] h-full overflow-auto flex flex-col items-center gap-8 py-10">
+
+        <a href="./dashboard.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-line-chart-line text-xl"></i>
+                <label class="text-[14px]">Dashboard</label>
+            </button>
+        </a>
+
+        <a href="./students.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-group-line text-xl"></i>
+                <label class="text-[14px]">Students</label>
+            </button>
+        </a>
+
+        <a href="./subjects.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-book-open-line text-xl"></i>
+                <label class="text-[14px]">Subjects</label>
+            </button>
+        </a>
+
+        <a href="./classes.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-artboard-line text-xl"></i>
+                <label class="text-[14px]">Classes</label>
+            </button>
+        </a>
+
+        <a href="./payments.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-bank-card-line text-xl"></i>
+                <label class="text-[14px]">Payments</label>
+            </button>
+        </a>
+
+        <a href="./teachers.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-user-2-line text-xl"></i>
+                <label class="text-[14px]">Teachers</label>
+            </button>
+        </a>
+
+        <a href="./expenses.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-wallet-line text-xl"></i>
+                <label class="text-[14px]">Expenses</label>
+            </button>
+        </a>
+
+        <a href="./salaries.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-money-rupee-circle-line text-xl"></i>
+                <label class="text-[14px]">Salaries</label>
+            </button>
+        </a>
+
+
+        
+
+    </aside>
+
+
+    <section class="select-none ml-[180px] p-8 space-y-8" style="width: calc(100% - 180px);">
+        <div class="p-4 bg-white rounded-lg shadow-lg flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <button class="w-12 h-12 bg-gray-200 hover:bg-gray-300 rounded-full">
+                    <i class="ri-arrow-left-line"></i>
+                </button>
+                <h1 class="text-xl font-medium">Teachers</h1>
+            </div>
+
+            <div class="space-x-4">
+                <select name="export" id="export" class="px-6 py-2 rounded border border-gray-400 font-medium bg-white focus:outline-none">
+                    <option>Export</option>
+                    <option value="pdf">PDF</option>
+                    <option value="xls">XLS</option>
+                </select>
+                
+                <button 
+                    class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-6 py-2 rounded transition active:scale-95 hover:cursor-pointer"
+                    onclick="openAdmissionForm()">
+                    <i class="ri-user-add-line"></i>
+                    Add new Teacher
+                </button>
+            </div>
+        </div>
+
+        <div class="p-8 bg-white rounded-lg shadow-lg grid grid-cols-4 gap-12">
+
+            <div class="border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <img 
+                        src="../images/demo.jpg" 
+                        alt="students image"
+                        class="w-30 h-30 rounded-full" 
+                    />
+                    <h1 class="text-lg font-semibold">Ravindra Pratap Singh</h1>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <small class="text-sm text-gray-600">ravindra211@gmail.com</small>
+                    <small class="text-xs text-gray-600">+91 7784908009</small>
+                </div>
+
+                <div class="flex justify-center flex-col flex-wrap items-center gap-2 my-2">
+
+                    <h1 class="text-sm font-semibold text-gray-800 ">Subjects:</h1>
+                    <div class="flex flex-wrap items-center justify-center gap-1">
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Maths</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Physics</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Computer</span>
+                    </div>
+                </div>
+
+                <!-- <div class="flex flex-col items-center justify-center">
+                    <small class="text-sm text-gray-600">Section: A2</small>
+                    <small class="text-sm text-gray-800 font-semibold">Class Teacher: Mr. Prashant Tiwari</small>
+                </div> -->
+            </div>                
+            <div class="border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <img 
+                        src="../images/demo.jpg" 
+                        alt="students image"
+                        class="w-30 h-30 rounded-full" 
+                    />
+                    <h1 class="text-lg font-semibold">Ravindra Pratap Singh</h1>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <small class="text-sm text-gray-600">ravindra211@gmail.com</small>
+                    <small class="text-xs text-gray-600">+91 7784908009</small>
+                </div>
+
+                <div class="flex justify-center flex-col flex-wrap items-center gap-2 my-2">
+
+                    <h1 class="text-sm font-semibold text-gray-800 ">Subjects:</h1>
+                    <div class="flex flex-wrap items-center justify-center gap-1">
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Maths</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Physics</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Computer</span>
+                    </div>
+                </div>
+
+                <!-- <div class="flex flex-col items-center justify-center">
+                    <small class="text-sm text-gray-600">Section: A2</small>
+                    <small class="text-sm text-gray-800 font-semibold">Class Teacher: Mr. Prashant Tiwari</small>
+                </div> -->
+            </div>                
+            <div class="border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <img 
+                        src="../images/demo.jpg" 
+                        alt="students image"
+                        class="w-30 h-30 rounded-full" 
+                    />
+                    <h1 class="text-lg font-semibold">Ravindra Pratap Singh</h1>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <small class="text-sm text-gray-600">ravindra211@gmail.com</small>
+                    <small class="text-xs text-gray-600">+91 7784908009</small>
+                </div>
+
+                <div class="flex justify-center flex-col flex-wrap items-center gap-2 my-2">
+
+                    <h1 class="text-sm font-semibold text-gray-800 ">Subjects:</h1>
+                    <div class="flex flex-wrap items-center justify-center gap-1">
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Maths</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Physics</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Computer</span>
+                    </div>
+                </div>
+
+                <!-- <div class="flex flex-col items-center justify-center">
+                    <small class="text-sm text-gray-600">Section: A2</small>
+                    <small class="text-sm text-gray-800 font-semibold">Class Teacher: Mr. Prashant Tiwari</small>
+                </div> -->
+            </div>                
+            <div class="border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <img 
+                        src="../images/demo.jpg" 
+                        alt="students image"
+                        class="w-30 h-30 rounded-full" 
+                    />
+                    <h1 class="text-lg font-semibold">Ravindra Pratap Singh</h1>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <small class="text-sm text-gray-600">ravindra211@gmail.com</small>
+                    <small class="text-xs text-gray-600">+91 7784908009</small>
+                </div>
+
+                <div class="flex justify-center flex-col flex-wrap items-center gap-2 my-2">
+
+                    <h1 class="text-sm font-semibold text-gray-800 ">Subjects:</h1>
+                    <div class="flex flex-wrap items-center justify-center gap-1">
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Maths</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Physics</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Computer</span>
+                    </div>
+                </div>
+
+                <!-- <div class="flex flex-col items-center justify-center">
+                    <small class="text-sm text-gray-600">Section: A2</small>
+                    <small class="text-sm text-gray-800 font-semibold">Class Teacher: Mr. Prashant Tiwari</small>
+                </div> -->
+            </div>                
+            <div class="border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <img 
+                        src="../images/demo.jpg" 
+                        alt="students image"
+                        class="w-30 h-30 rounded-full" 
+                    />
+                    <h1 class="text-lg font-semibold">Ravindra Pratap Singh</h1>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <small class="text-sm text-gray-600">ravindra211@gmail.com</small>
+                    <small class="text-xs text-gray-600">+91 7784908009</small>
+                </div>
+
+                <div class="flex justify-center flex-col flex-wrap items-center gap-2 my-2">
+
+                    <h1 class="text-sm font-semibold text-gray-800 ">Subjects:</h1>
+                    <div class="flex flex-wrap items-center justify-center gap-1">
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Maths</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Physics</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Computer</span>
+                    </div>
+                </div>
+
+                <!-- <div class="flex flex-col items-center justify-center">
+                    <small class="text-sm text-gray-600">Section: A2</small>
+                    <small class="text-sm text-gray-800 font-semibold">Class Teacher: Mr. Prashant Tiwari</small>
+                </div> -->
+            </div>                
+            <div class="border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <img 
+                        src="../images/demo.jpg" 
+                        alt="students image"
+                        class="w-30 h-30 rounded-full" 
+                    />
+                    <h1 class="text-lg font-semibold">Ravindra Pratap Singh</h1>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <small class="text-sm text-gray-600">ravindra211@gmail.com</small>
+                    <small class="text-xs text-gray-600">+91 7784908009</small>
+                </div>
+
+                <div class="flex justify-center flex-col flex-wrap items-center gap-2 my-2">
+
+                    <h1 class="text-sm font-semibold text-gray-800 ">Subjects:</h1>
+                    <div class="flex flex-wrap items-center justify-center gap-1">
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Maths</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Physics</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Computer</span>
+                    </div>
+                </div>
+
+                <!-- <div class="flex flex-col items-center justify-center">
+                    <small class="text-sm text-gray-600">Section: A2</small>
+                    <small class="text-sm text-gray-800 font-semibold">Class Teacher: Mr. Prashant Tiwari</small>
+                </div> -->
+            </div>                
+            <div class="border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <img 
+                        src="../images/demo.jpg" 
+                        alt="students image"
+                        class="w-30 h-30 rounded-full" 
+                    />
+                    <h1 class="text-lg font-semibold">Ravindra Pratap Singh</h1>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <small class="text-sm text-gray-600">ravindra211@gmail.com</small>
+                    <small class="text-xs text-gray-600">+91 7784908009</small>
+                </div>
+
+                <div class="flex justify-center flex-col flex-wrap items-center gap-2 my-2">
+
+                    <h1 class="text-sm font-semibold text-gray-800 ">Subjects:</h1>
+                    <div class="flex flex-wrap items-center justify-center gap-1">
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Maths</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Physics</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Computer</span>
+                    </div>
+                </div>
+
+                <!-- <div class="flex flex-col items-center justify-center">
+                    <small class="text-sm text-gray-600">Section: A2</small>
+                    <small class="text-sm text-gray-800 font-semibold">Class Teacher: Mr. Prashant Tiwari</small>
+                </div> -->
+            </div>                
+            <div class="border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <img 
+                        src="../images/demo.jpg" 
+                        alt="students image"
+                        class="w-30 h-30 rounded-full" 
+                    />
+                    <h1 class="text-lg font-semibold">Ravindra Pratap Singh</h1>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <small class="text-sm text-gray-600">ravindra211@gmail.com</small>
+                    <small class="text-xs text-gray-600">+91 7784908009</small>
+                </div>
+
+                <div class="flex justify-center flex-col flex-wrap items-center gap-2 my-2">
+
+                    <h1 class="text-sm font-semibold text-gray-800 ">Subjects:</h1>
+                    <div class="flex flex-wrap items-center justify-center gap-1">
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Maths</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Physics</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Computer</span>
+                    </div>
+                </div>
+
+                <!-- <div class="flex flex-col items-center justify-center">
+                    <small class="text-sm text-gray-600">Section: A2</small>
+                    <small class="text-sm text-gray-800 font-semibold">Class Teacher: Mr. Prashant Tiwari</small>
+                </div> -->
+            </div>                
+            <div class="border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <img 
+                        src="../images/demo.jpg" 
+                        alt="students image"
+                        class="w-30 h-30 rounded-full" 
+                    />
+                    <h1 class="text-lg font-semibold">Ravindra Pratap Singh</h1>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <small class="text-sm text-gray-600">ravindra211@gmail.com</small>
+                    <small class="text-xs text-gray-600">+91 7784908009</small>
+                </div>
+
+                <div class="flex justify-center flex-col flex-wrap items-center gap-2 my-2">
+
+                    <h1 class="text-sm font-semibold text-gray-800 ">Subjects:</h1>
+                    <div class="flex flex-wrap items-center justify-center gap-1">
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Maths</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Physics</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Computer</span>
+                    </div>
+                </div>
+
+                <!-- <div class="flex flex-col items-center justify-center">
+                    <small class="text-sm text-gray-600">Section: A2</small>
+                    <small class="text-sm text-gray-800 font-semibold">Class Teacher: Mr. Prashant Tiwari</small>
+                </div> -->
+            </div>                
+            <div class="border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <img 
+                        src="../images/demo.jpg" 
+                        alt="students image"
+                        class="w-30 h-30 rounded-full" 
+                    />
+                    <h1 class="text-lg font-semibold">Ravindra Pratap Singh</h1>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <small class="text-sm text-gray-600">ravindra211@gmail.com</small>
+                    <small class="text-xs text-gray-600">+91 7784908009</small>
+                </div>
+
+                <div class="flex justify-center flex-col flex-wrap items-center gap-2 my-2">
+
+                    <h1 class="text-sm font-semibold text-gray-800 ">Subjects:</h1>
+                    <div class="flex flex-wrap items-center justify-center gap-1">
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Maths</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Physics</span>
+                        <span class="bg-zinc-500 py-[2px] px-2 rounded text-xs text-gray-200">Computer</span>
+                    </div>
+                </div>
+
+                <!-- <div class="flex flex-col items-center justify-center">
+                    <small class="text-sm text-gray-600">Section: A2</small>
+                    <small class="text-sm text-gray-800 font-semibold">Class Teacher: Mr. Prashant Tiwari</small>
+                </div> -->
+            </div>                
+        </div>
+    </section>
+
+    <article id="drawer" class=" select-none bg-white h-screen fixed top-0 right-0 shadow-[-10px_0px_15px_-3px_rgba(0,0,0,0.1)] py-8 overflow-y-auto" style="width: 0; transition: 0.3s;">
+        <div class="flex justify-between items-center border-b border-gray-200 pb-2 px-10 mb-6">
+            <h1 class="text-xl font-semibold text-gray-800">Add new Teacher</h1>
+            <button class="hover:cursor-pointer transition active:scale-95" onclick="closeAdmissionForm()">
+                <i class="ri-close-circle-line text-2xl text-gray-800"></i>
+            </button>
+        </div>
+
+        <form class="w-full px-10 grid grid-cols-2 gap-8" onsubmit="createTeacher(event)">
+            <div class="flex flex-col gap-2">
+                <label for="teacherName" class="text-base font-medium text-gray-600">Teacher's name</label>
+                <input 
+                    type="text"
+                    id="teacherName"
+                    name="teacherName"
+                    placeholder="Enter Teacher's Name"
+                    class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700"
+                    required
+                />
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="gender" class="text-base font-medium text-gray-600">Gender</label>
+                <select 
+                    name="gender"
+                    id="gender"
+                    class="border border-gray-400 py-2 px-4 rounded-md focus:outline-gray-400 text-gray-600 placeholder-gray-700"
+                    required
+                />
+                    <option value="">Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Others</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="dob" class="text-base font-medium text-gray-600">DOB</label>
+                <input 
+                    type="date"
+                    id="dob"
+                    name="dob"
+                    class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700"
+                    required
+                />
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="doj" class="text-base font-medium text-gray-600">Date of Joining</label>
+                <input 
+                    type="date"
+                    id="doj"
+                    name="doj"
+                    class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700"
+                    required
+                />
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="religion" class="text-base font-medium text-gray-600">Religion</label>
+                <select 
+                    name="religion"
+                    id="religion"
+                    class="border border-gray-400 py-2 px-4 rounded-md focus:outline-gray-400 text-gray-600 placeholder-gray-700"
+                    required
+                />
+                    <option value="">Select your religion</option>
+                    <option value="hindu">Hindu</option>
+                    <option value="muslim">Muslim</option>
+                    <option value="christian">Christian</option>
+                    <option value="jain">Jain</option>
+                    <option value="sikhism">Sihkism</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="mobile" class="text-base font-medium text-gray-600">Mobile</label>
+                <input 
+                    type="number"
+                    id="mobile"
+                    name="mobile"
+                    placeholder="Enter Mobile number"
+                    class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700"
+                    required
+                />
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="email" class="text-base font-medium text-gray-600">Email</label>
+                <input 
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter email id"
+                    class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700"
+                    required
+                />
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="qualification" class="text-base font-medium text-gray-600">Qualification</label>
+                <select name="qualification" id="qualification" class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700" required>
+                    <option value="graduate">Graduate</option>
+                    <option value="masters">Masters</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="address" class="text-base font-medium text-gray-600">Address</label>
+                <input 
+                    type="text"
+                    id="address"
+                    name="address"
+                    placeholder="A/89, Sector-A, Alijang"
+                    class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700"
+                    required
+                />
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="city" class="text-base font-medium text-gray-600">City</label>
+                <input 
+                    type="text"
+                    id="city"
+                    name="city"
+                    placeholder="Enter city name"
+                    class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700"
+                    required
+                />
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="state" class="text-base font-medium text-gray-600">State</label>
+                <input 
+                    type="text"
+                    id="state"
+                    name="state"
+                    placeholder="Enter state name"
+                    class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700"
+                    required
+                />
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="country" class="text-base font-medium text-gray-600">Country</label>
+                <input 
+                    type="text"
+                    id="country"
+                    name="country"
+                    placeholder="Enter country name"
+                    class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700"
+                    required
+                />
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="pincode" class="text-base font-medium text-gray-600">Pincode</label>
+                <input 
+                    type="number"
+                    id="pincode"
+                    name="pincode"
+                    placeholder="Enter pincode name"
+                    class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700"
+                    required
+                />
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="previousSchool" class="text-base font-medium text-gray-600">Previous School</label>
+                <input 
+                    type="text"
+                    id="previousSchool"
+                    name="previousSchool"
+                    placeholder="Enter previous school name (optional)"
+                    class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700"
+                />
+            </div>
+
+            <div class="flex flex-col gap-2 col-span-2">
+                <label for="subjects" class="text-base font-medium text-gray-600">Subjects</label>
+                <select name="subjects" id="subjects" class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700" required multiple>
+                    <option value="math">Math</option>
+                    <option value="physics">Physics</option>
+                    <option value="computer">Computer</option>
+                </select>
+            </div>
+
+            <div>
+                <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-md text-white font-medium px-6 py-3 rounded transition active:scale-95 hover:cursor-pointer">
+                    <i class="ri-arrow-right-line"></i>
+                    Add now
+                </button>
+            </div>
+        </form>
+    </article>
+    <script src="../script/common.js"></script>    
+    <script src="../script/teachers.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -91,7 +91,13 @@
                 <h1 class="text-xl font-medium">Students</h1>
             </div>
 
-            <div>
+            <div class="space-x-4">
+                <select name="export" id="export" class="px-6 py-2 rounded border border-gray-400 font-medium bg-white focus:outline-none">
+                    <option>Export</option>
+                    <option value="pdf">PDF</option>
+                    <option value="xls">XLS</option>
+                </select>
+
                 <button 
                     class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-6 py-2 rounded transition active:scale-95 hover:cursor-pointer"
                     onclick="openAdmissionForm()">

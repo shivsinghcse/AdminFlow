@@ -332,18 +332,6 @@
             </div>
 
             <div class="flex flex-col gap-2">
-                <label for="sections" class="text-base font-medium text-gray-600">Sections</label>
-                <input 
-                    type="text"
-                    id="sections"
-                    name="sections"
-                    placeholder="A, B, C, D"
-                    class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700"
-                    required
-                />
-            </div>
-
-            <div class="flex flex-col gap-2">
                 <label for="classTeacher" class="text-base font-medium text-gray-600">Class Teacher</label>
                 <select name="classTeacher" id="classTeacher" class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700">
                     <option value="mr. prashant tiwari">Mr. Prashant Tiwari</option>
@@ -352,7 +340,16 @@
                 </select>
             </div>
 
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2 col-span-2">
+                <label for="sections" class="text-base font-medium text-gray-600">Sections</label>
+                <select name="sections" id="sections" class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700" required multiple>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+            </div>
+
+            <div class="flex flex-col gap-2 col-span-2">
                 <label for="fee" class="text-base font-medium text-gray-600">Fee</label>
                 <input 
                     type="number"
@@ -365,6 +362,7 @@
                 />
             </div>
 
+            <div></div>
             
             <div>
                 <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-md text-white font-medium px-6 py-3 rounded transition active:scale-95 hover:cursor-pointer">
