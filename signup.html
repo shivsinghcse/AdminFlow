@@ -41,13 +41,25 @@
                     <form onsubmit="signup(event)" class="space-y-6">
 
                         <div class="border-b border-slate-300 flex items-center gap-3">
+                            <i class="ri-building-line text-lg text-slate-400 mt-[2px]"></i>
+                            <input 
+                                type="text"
+                                id="schoolName" 
+                                class="flex-1 focus:outline-none rounded-lg py-2 placeholder-slate-400" 
+                                placeholder="School name" 
+                                name="schoolName"
+                                required
+                            />
+                        </div>
+
+                        <div class="border-b border-slate-300 flex items-center gap-3">
                             <i class="ri-user-3-line text-lg text-slate-400 mt-[2px]"></i>
                             <input 
                                 type="text"
-                                id="fullname" 
+                                id="dirName" 
                                 class="flex-1 focus:outline-none rounded-lg py-2 placeholder-slate-400" 
-                                placeholder="Full name" 
-                                name="fullname"
+                                placeholder="Director name" 
+                                name="dirName"
                                 required
                             />
                         </div>
