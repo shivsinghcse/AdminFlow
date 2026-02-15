@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
         href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
-        rel="stylesheet"
+        rel="stylesheet" 
     /> 
     <link
         rel="stylesheet"
@@ -15,8 +15,9 @@
     />
 
     <link rel="stylesheet" href="../style/common.css" />
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
 </head>
 <body>
 
@@ -151,14 +152,20 @@
                 </div>
             </div>
 
-            <div id="admission-chart" class="col-span-2">
-                <button id="one_month">1M</button>
-                <button id="six_months">6M</button>
-                <button id="one_year">1Y</button>
-                <button id="ytd">YTD</button>
-                <button id="all">ALL</button>
+            <div class="col-span-2 space-y-4">
+                <h1 class="text-2xl font-medium">Admission Overview</h1>
+                <canvas id="admission-chart" width="400" height="200" ></canvas>
             </div>
-            <div id="payment-chart" class="col-span-2"></div>
+
+            <div class=" col-span-2 flex justify-center">
+                <div class="space-y-4">
+                    <h1 class="text-2xl font-medium text-left">Payment Status</h1>
+                    <canvas id="payment-chart" width="400" height="200" ></canvas>
+                </div>
+            </div>
+
+           
+
 
         </div>
     </section>
