@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students | AdminFlow</title>
+    <title>Salaries | AdminFlow</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
         href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
@@ -18,7 +18,13 @@
 
 </head>
 <body>
-    <aside id="sidenav" class="fixed top-0 left-0 w-[180px] h-full overflow-auto flex flex-col items-center gap-8 py-10">
+
+    <select name="session" id="session" class="bg-white p-3 text-zinc-600 font-medium text-center fixed top-0 left-0 w-[173px] shadow-lg z-[10000] focus:outline-none">
+            <option value="2025-2026">2025-2026</option>
+            <option value="2024-2025">2024-2025</option>
+    </select>
+
+    <aside id="sidenav" class="fixed top-8 left-0 w-[180px] h-full overflow-auto flex flex-col items-center gap-8 py-10">
 
         <a href="./dashboard.html">
             <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
@@ -62,6 +68,13 @@
             </button>
         </a>
 
+        <a href="./employees.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-empathize-line text-xl"></i>
+                <label class="text-[14px]">Employees</label>
+            </button>
+        </a>
+
         <a href="./expenses.html">
             <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
                 <i class="ri-wallet-line text-xl"></i>
@@ -76,13 +89,24 @@
             </button>
         </a>
 
-
-        
-
+        <a href="./settings.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-settings-3-line text-xl"></i>
+                <label class="text-[14px]">Settings</label>
+            </button>
+        </a>
     </aside>
 
 
     <section class="ml-[180px] p-8 space-y-8" style="width: calc(100% - 180px);">
+        <div class="bg-white py-8 px-12  rounded flex items-center justify-between">
+                <img src="../images/logo.jpg" alt="logo" class="w-18 border rounded-full ">
+                <div>
+                    <h1 class="text-3xl font-bold text-zinc-700">S.P. International School</h1>
+                    <p class="text-gray-700 font-medium text-right">Excellence For All, Excellence From All</p>
+                    <p class="text-gray-500 font-medium text-right">ESTD : 2021</p>
+                </div>
+        </div>
         <div class="p-4 bg-white rounded-lg shadow-lg flex justify-between items-center">
             <div class="flex items-center gap-4">
                 <button class="w-12 h-12 bg-gray-200 hover:bg-gray-300 rounded-full">
@@ -92,6 +116,14 @@
             </div>
 
             <div class="space-x-4">
+                <input 
+                    type="search" 
+                    name="search" 
+                    id="search" 
+                    class="px-4 py-2 rounded border border-gray-400 font-medium bg-white focus:outline-none w-[300px] text-zinc-600" 
+                    placeholder="Search"
+                />
+
                 <button 
                     class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-6 py-2 rounded transition active:scale-95 hover:cursor-pointer"
                     onclick="openAdmissionForm()">
