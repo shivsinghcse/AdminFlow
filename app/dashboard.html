@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | AdminFlow</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+        rel="stylesheet"
+    /> 
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="../style/common.css" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+</head>
+<body>
+
+    <select name="session" id="session" class="bg-white p-3 text-zinc-600 font-medium text-center fixed top-0 left-0 w-[173px] shadow-lg z-[10000] focus:outline-none">
+            <option value="2025-2026">2025-2026</option>
+            <option value="2024-2025">2024-2025</option>
+    </select>
+
+    <aside id="sidenav" class="fixed top-8 left-0 w-[180px] h-full overflow-auto flex flex-col items-center gap-8 py-10">
+
+        <a href="./dashboard.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-line-chart-line text-xl"></i>
+                <label class="text-[14px]">Dashboard</label>
+            </button>
+        </a>
+
+        <a href="./students.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-group-line text-xl"></i>
+                <label class="text-[14px]">Students</label>
+            </button>
+        </a>
+
+        <a href="./subjects.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-book-open-line text-xl"></i>
+                <label class="text-[14px]">Subjects</label>
+            </button>
+        </a>
+
+        <a href="./classes.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-artboard-line text-xl"></i>
+                <label class="text-[14px]">Classes</label>
+            </button>
+        </a>
+
+        <a href="./payments.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-bank-card-line text-xl"></i>
+                <label class="text-[14px]">Payments</label>
+            </button>
+        </a>
+
+        <a href="./teachers.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-user-2-line text-xl"></i>
+                <label class="text-[14px]">Teachers</label>
+            </button>
+        </a>
+
+        <a href="./employees.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-empathize-line text-xl"></i>
+                <label class="text-[14px]">Employees</label>
+            </button>
+        </a>
+
+        <a href="./expenses.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-wallet-line text-xl"></i>
+                <label class="text-[14px]">Expenses</label>
+            </button>
+        </a>
+
+        <a href="./salaries.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-money-rupee-circle-line text-xl"></i>
+                <label class="text-[14px]">Salaries</label>
+            </button>
+        </a>
+
+        <a href="./settings.html">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97">
+                <i class="ri-settings-3-line text-xl"></i>
+                <label class="text-[14px]">Settings</label>
+            </button>
+        </a>
+    </aside>
+
+
+    <section class="select-none ml-[180px] p-8 space-y-8" style="width: calc(100% - 180px);">
+        <div class="bg-white py-8 px-12  rounded flex items-center justify-between">
+                <img src="../images/logo.jpg" alt="logo" class="w-18 border rounded-full ">
+                <div>
+                    <h1 class="text-3xl font-bold text-zinc-700">S.P. International School</h1>
+                    <p class="text-gray-700 font-medium text-right">Excellence For All, Excellence From All</p>
+                    <p class="text-gray-500 font-medium text-right">ESTD : 2021</p>
+                </div>
+        </div>
+        
+
+        <div class="p-8 bg-white rounded-lg shadow-lg grid grid-cols-4 gap-12">
+            <div class="flex bg-linear-to-r from-sky-500 to-indigo-500 p-12 text-white rounded-xl shadow gap-6">
+                <button class="bg-white w-22 h-22 rounded-full">
+                    <i class="ri-user-line text-5xl text-zinc-700"></i>
+                </button>
+                <div>
+                    <h1 class="text-3xl font-bold text-white">Students</h1>
+                    <p class="text-xl font-medium">1459</p>
+                </div>
+            </div>
+
+            <div class="flex bg-linear-to-r from-amber-500 to-orange-500 p-12 text-white rounded-xl shadow gap-6">
+                <button class="bg-white w-22 h-22 rounded-full">
+                    <i class="ri-artboard-line text-5xl text-zinc-700"></i>
+                </button>
+                <div>
+                    <h1 class="text-3xl font-bold text-white">Teachers</h1>
+                    <p class="text-xl font-medium">31</p>
+                </div>
+            </div>
+
+            <div class="flex bg-linear-to-r from-sky-500 to-indigo-500 p-12 text-white rounded-xl shadow gap-6">
+                <button class="bg-white w-22 h-22 rounded-full">
+                    <i class="ri-empathize-line text-5xl text-zinc-700"></i>
+                </button>
+                <div>
+                    <h1 class="text-3xl font-bold text-white">Employee</h1>
+                    <p class="text-xl font-medium">59</p>
+                </div>
+            </div>
+
+            <div class="flex bg-linear-to-r from-amber-500 to-orange-500 p-12 text-white rounded-xl shadow gap-6">
+                <button class="bg-white w-22 h-22 rounded-full">
+                    <i class="ri-book-2-line text-5xl text-zinc-700"></i>
+                </button>
+                <div>
+                    <h1 class="text-3xl font-bold text-white">Subjects</h1>
+                    <p class="text-xl font-medium">14</p>
+                </div>
+            </div>
+
+            <div id="admission-chart" class="col-span-2">
+                <button id="one_month">1M</button>
+                <button id="six_months">6M</button>
+                <button id="one_year">1Y</button>
+                <button id="ytd">YTD</button>
+                <button id="all">ALL</button>
+            </div>
+            <div id="payment-chart" class="col-span-2"></div>
+
+        </div>
+    </section>
+
+    <script src="../script/common.js"></script>    
+    <script src="../script/dashboard.js"></script>
+</body>
+</html>
