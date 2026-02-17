@@ -2,6 +2,7 @@ window.onload = async () => {
   admissionChart()
   paymentChart()
   await getSession()
+  console.log(session);
 }
 
 const admissionChart = () => {

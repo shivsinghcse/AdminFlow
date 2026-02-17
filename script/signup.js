@@ -1,5 +1,13 @@
 axios.defaults.baseURL = server 
 
+window.onload = async () => {
+    await getSession()
+    
+    if(session){
+        location.href = "/app/dashboard.html"
+    }
+}
+
 const signup = async (e) => {
     e.preventDefault();
     const form = e.target

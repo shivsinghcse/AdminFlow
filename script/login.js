@@ -1,5 +1,12 @@
 axios.defaults.baseURL = server
 
+window.onload = async () => {
+    await getSession()
+    if(session){
+        location.href = "/app/dashboard.html"
+    }
+}
+
 const login = async (e) => {
     e.preventDefault();
     const email = document.getElementById("email").value.trim();

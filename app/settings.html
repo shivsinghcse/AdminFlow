@@ -96,16 +96,23 @@
                 <label class="text-[14px]">Settings</label>
             </button>
         </a>     
+
+        <a onclick="logout()">
+            <button class="flex flex-col justify-center h-22 w-22 bg-white rounded-lg shadow-lg hover:cursor-pointer hover:bg-rose-50 hover:font-medium transition active:scale-97 mb-12">
+                <i class="ri-logout-circle-line text-xl"></i>
+                <label class="text-[14px]">Logout</label>
+            </button>
+        </a>  
     </aside>
 
 
     <section class="select-none ml-[180px] p-8 space-y-8" style="width: calc(100% - 180px);">
         <div class="bg-white py-8 px-12  rounded flex items-center justify-between">
-            <img src="../images/logo.jpg" alt="logo" class="w-18 border rounded-full ">
+            <img src="../images/logo.jpg" alt="logo" class="w-18 border rounded-full" id="logo">
             <div>
-                <h1 class="text-3xl font-bold text-zinc-700">S.P. International School</h1>
-                <p class="text-gray-700 font-medium text-right">Excellence For All, Excellence From All</p>
-                <p class="text-gray-500 font-medium text-right">ESTD : 2021</p>
+                <h1 class="text-3xl font-bold text-zinc-700 text-right" id="schoolName"></h1>
+                <p class="text-gray-700 font-medium text-right" id="email"></p>
+                <p class="text-gray-500 font-medium text-right" id="mobile"></p>
             </div>
         </div>
         <div class="p-4 bg-white rounded-lg shadow-lg flex justify-between items-center">

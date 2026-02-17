@@ -18,6 +18,8 @@ const getSession = async() => {
     const token = localStorage.getItem('token')
     
     if(!token){
+        if(location.pathname === "/login.html" || location.pathname === "/signup.html") return
+
         location.href = "/login.html"
     }
     else{
@@ -25,6 +27,7 @@ const getSession = async() => {
         {
             const res = await axios.post("/token/verify", {token: token})
             session = res.data
+            showUserInfo()
         }
         catch(err)
         {
@@ -34,3 +37,18 @@ const getSession = async() => {
     }
 }
 
+
+const logout = () => {
+    localStorage.clear()
+    location.href = "/login.html"
+}
+
+const showUserInfo = () => {
+    const schoolName = document.querySelector('#schoolName')
+    const email = document.querySelector('#email')
+    const mobile = document.querySelector('#mobile')
+
+    schoolName.textContent = session.schoolName
+    email.textContent = session.email
+    mobile.textContent = session.mobile
+}
