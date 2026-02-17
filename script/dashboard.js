@@ -1,6 +1,7 @@
-window.onload = () => {
+window.onload = async () => {
   admissionChart()
   paymentChart()
+  await getSession()
 }
 
 const admissionChart = () => {

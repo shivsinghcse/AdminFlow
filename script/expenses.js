@@ -1,3 +1,6 @@
+window.onload = async () => {
+    await getSession()
+}
 
 const createExpenses = (e) => {
     e.preventDefault()

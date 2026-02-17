@@ -1,4 +1,6 @@
-
+window.onload = async () => {
+    await getSession()
+}
 
 const createSubject = (e) => {
     e.preventDefault()

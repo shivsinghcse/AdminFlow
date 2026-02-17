@@ -1,6 +1,6 @@
 axios.defaults.baseURL = server 
 
-const signup = (e) => {
+const signup = async (e) => {
     e.preventDefault();
     const form = e.target
     const schoolName = form.elements.schoolName.value.trim()
@@ -19,25 +19,24 @@ const signup = (e) => {
 
     form.reset()
 
-    axios.post("/school/signup", payload)
+    try
+    {
+        const data = await axios.post("/school/signup", payload)
 
-    .then((res)=>{
-        Swal.fire({
-            icon: "success",
-            title: res.data.message
-        })
-        .then(() => {
-            location.href = "./login.html"
-        })
-    })
-
-    .catch((err)=>{
-        console.log(err);
+            Swal.fire({
+                icon: "success",
+                title: data.data.message
+            })
+            .then(() => {
+                location.href = "./login.html"
+            })
+    }
+    catch(err)
+    {
         Swal.fire({
             icon: "error",
             title: "Signup failed!",
-            text: err
+            text: err.message
         })
-    })
-    
+    }    
 }

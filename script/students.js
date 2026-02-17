@@ -1,3 +1,7 @@
+window.onload = async () => {
+    await getSession()
+}
+
 const createAdmission = (e) => {
     e.preventDefault()
     const studentName = document.getElementById('studentName').value.trim()

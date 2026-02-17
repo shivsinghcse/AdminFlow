@@ -1,6 +1,6 @@
 axios.defaults.baseURL = server
 
-const login = (e) => {
+const login = async (e) => {
     e.preventDefault();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
@@ -11,31 +11,20 @@ const login = (e) => {
     }
 
     e.target.reset()
-    
-    axios.post("/school/login", payload)
-    .then((res) => {
-        localStorage.setItem("token", res.data.token)
 
-        Swal.fire({
-            icon: "success",
-            title: res.data.message+"!"
-        })
+    try{
+        const data = await axios.post("/school/login", payload)
 
-        .then(() => {
-            location.href = "../app/dashboard.html"
-        })
-
-    })
-
-    .catch((err) => {
-
-        // console.log(err.response.data.message);
+        localStorage.setItem("token", data.data.token)
+        location.href = "../app/dashboard.html"
+    }
+    catch(err)
+    {
         Swal.fire({
             icon: "error",
             title: "Login failed!",
             text: err.response.data.message
         })
-        
-    })
+    }
 }
  

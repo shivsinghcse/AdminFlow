@@ -1,3 +1,7 @@
+window.onload = async () => {
+    await getSession()
+}
+
 const createSalary = (e) => {
     e.preventDefault()
     

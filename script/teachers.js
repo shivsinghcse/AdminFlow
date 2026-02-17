@@ -1,4 +1,6 @@
-
+window.onload = async () => {
+    await getSession()
+}
 
 const createTeacher = (e) => {
     e.preventDefault()
