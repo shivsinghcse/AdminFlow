@@ -1,3 +1,5 @@
+const server = "https://school-backend-pi.vercel.app"
+
 const drawer = document.getElementById('drawer')
 
 const openAdmissionForm = () => {

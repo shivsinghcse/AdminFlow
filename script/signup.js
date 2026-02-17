@@ -1,3 +1,5 @@
+axios.defaults.baseURL = server 
+
 const signup = (e) => {
     e.preventDefault();
     const form = e.target
@@ -17,23 +19,25 @@ const signup = (e) => {
 
     form.reset()
 
-    fetch("http://localhost:8080/school/signup", {
-        method: "POST", 
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
+    axios.post("/school/signup", payload)
+
+    .then((res)=>{
+        Swal.fire({
+            icon: "success",
+            title: res.data.message
+        })
+        .then(() => {
+            location.href = "./login.html"
+        })
+    })
+
+    .catch((err)=>{
+        console.log(err);
+        Swal.fire({
+            icon: "error",
+            title: "Signup failed!",
+            text: err
+        })
     })
     
-    .then((res) => {
-        return res.json()
-    })
-    
-    .then((data) => {
-        console.log(data);
-    })
-    
-    .catch((err) => {
-        console.log(err.message);
-    })
 }
