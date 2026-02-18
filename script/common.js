@@ -1,6 +1,6 @@
 let session = null
-console.log(session);
-const server = "https://school-backend-pi.vercel.app"
+
+const server = "https://adminflow-backend.onrender.com"
 axios.defaults.baseURL = server
 
 const drawer = document.getElementById('drawer')
@@ -54,4 +54,14 @@ const showUserInfo = () => {
     schoolName.textContent = session.schoolName
     email.textContent = session.email
     mobile.textContent = session.mobile
+}
+
+const getServerSession = () => {
+    const token = localStorage.getItem('token')
+    const options = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+    return options
 }
