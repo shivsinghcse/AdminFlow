@@ -1,5 +1,5 @@
 let session = null
-
+console.log(session);
 const server = "https://school-backend-pi.vercel.app"
 axios.defaults.baseURL = server
 
@@ -32,6 +32,7 @@ const getSession = async() => {
         catch(err)
         {
             localStorage.clear()
+            if(location.pathname === "/login.html" || location.pathname === "/signup.html") return
             location.href = "/login.html"
         }
     }
@@ -47,6 +48,8 @@ const showUserInfo = () => {
     const schoolName = document.querySelector('#schoolName')
     const email = document.querySelector('#email')
     const mobile = document.querySelector('#mobile')
+
+    if(!schoolName || !email || !mobile) return 
 
     schoolName.textContent = session.schoolName
     email.textContent = session.email

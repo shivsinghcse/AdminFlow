@@ -2,7 +2,8 @@ axios.defaults.baseURL = server
 
 window.onload = async () => {
     await getSession()
-    if(session){
+    if(session)
+    {
         location.href = "/app/dashboard.html"
     }
 }
