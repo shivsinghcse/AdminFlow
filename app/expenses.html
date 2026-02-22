@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../style/common.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
 
 </head>
 <body>
@@ -146,110 +147,21 @@
         <div class="p-8 bg-white rounded-lg shadow-lg">
 
            <table class="w-full">
-                <tr class="bg-gray-100 text-left">
-                    <th class="py-3 pl-4">Expense</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                    <th>Date</th>
-                    <th>Actions</th>
-                </tr>
+                <thead>
+                    <tr class="bg-gray-100 text-left">
+                        <th class="py-3 pl-4">Expense</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
 
-                <tr class="border-b border-gray-200 text-zinc-600">
-                    <td class="py-3 pl-4">Electricity bill</td>
-                    <td>June electricity bill</td>
-                    <td>2000</td>
-                    <td>01/07/2025</td>
-                    <td>
-                        <div class="space-x-2">
-                            <button class="bg-green-400 hover:bg-green-500 hover:cursor-pointer px-2 py-1 text-white rounded">
-                                <i class="ri-edit-line"></i>
-                            </button>
-                            <button class="bg-rose-400 hover:bg-rose-500 hover:cursor-pointer px-2 py-1 text-white rounded">
-                                <i class="ri-delete-bin-line"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="border-b border-gray-200 text-zinc-600">
-                    <td class="py-3 pl-4">Electricity bill</td>
-                    <td>June electricity bill</td>
-                    <td>2000</td>
-                    <td>01/07/2025</td>
-                    <td>
-                        <div class="space-x-2">
-                            <button class="bg-green-400 hover:bg-green-500 hover:cursor-pointer px-2 py-1 text-white rounded">
-                                <i class="ri-edit-line"></i>
-                            </button>
-                            <button class="bg-rose-400 hover:bg-rose-500 hover:cursor-pointer px-2 py-1 text-white rounded">
-                                <i class="ri-delete-bin-line"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="border-b border-gray-200 text-zinc-600">
-                    <td class="py-3 pl-4">Electricity bill</td>
-                    <td>June electricity bill</td>
-                    <td>2000</td>
-                    <td>01/07/2025</td>
-                    <td>
-                        <div class="space-x-2">
-                            <button class="bg-green-400 hover:bg-green-500 hover:cursor-pointer px-2 py-1 text-white rounded">
-                                <i class="ri-edit-line"></i>
-                            </button>
-                            <button class="bg-rose-400 hover:bg-rose-500 hover:cursor-pointer px-2 py-1 text-white rounded">
-                                <i class="ri-delete-bin-line"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="border-b border-gray-200 text-zinc-600">
-                    <td class="py-3 pl-4">Electricity bill</td>
-                    <td>June electricity bill</td>
-                    <td>2000</td>
-                    <td>01/07/2025</td>
-                    <td>
-                        <div class="space-x-2">
-                            <button class="bg-green-400 hover:bg-green-500 hover:cursor-pointer px-2 py-1 text-white rounded">
-                                <i class="ri-edit-line"></i>
-                            </button>
-                            <button class="bg-rose-400 hover:bg-rose-500 hover:cursor-pointer px-2 py-1 text-white rounded">
-                                <i class="ri-delete-bin-line"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="border-b border-gray-200 text-zinc-600">
-                    <td class="py-3 pl-4">Electricity bill</td>
-                    <td>June electricity bill</td>
-                    <td>2000</td>
-                    <td>01/07/2025</td>
-                    <td>
-                        <div class="space-x-2">
-                            <button class="bg-green-400 hover:bg-green-500 hover:cursor-pointer px-2 py-1 text-white rounded">
-                                <i class="ri-edit-line"></i>
-                            </button>
-                            <button class="bg-rose-400 hover:bg-rose-500 hover:cursor-pointer px-2 py-1 text-white rounded">
-                                <i class="ri-delete-bin-line"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr class="border-b border-gray-200 text-zinc-600">
-                    <td class="py-3 pl-4">Electricity bill</td>
-                    <td>June electricity bill</td>
-                    <td>2000</td>
-                    <td>01/07/2025</td>
-                    <td>
-                        <div class="space-x-2">
-                            <button class="bg-green-400 hover:bg-green-500 hover:cursor-pointer px-2 py-1 text-white rounded">
-                                <i class="ri-edit-line"></i>
-                            </button>
-                            <button class="bg-rose-400 hover:bg-rose-500 hover:cursor-pointer px-2 py-1 text-white rounded">
-                                <i class="ri-delete-bin-line"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
+                <tbody id="expense-body">
+
+                </tbody>
+
+            
            </table>
            
         </div>

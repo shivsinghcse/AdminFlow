@@ -130,7 +130,8 @@
                     name="search" 
                     id="search" 
                     class="px-4 py-2 rounded border border-gray-400 font-medium bg-white focus:outline-none w-[300px] text-zinc-600" 
-                    placeholder="Search"
+                    placeholder="Search class"
+                    oninput="searchClass(this)"
                 />
 
                 <button 
@@ -142,219 +143,15 @@
             </div>
         </div>
 
-        <div class="p-8 bg-white rounded-lg shadow-lg grid grid-cols-4 gap-12">
-
-            <div class="relative border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
-                <div class="uppercase flex items-center justify-center p-6 rounded-b-2xl shadow absolute top-0 w-[40%] bg-linear-to-t from-red-400 to-cyan-500 text-white text-4xl font-bold">
-                    LKG
-                </div>
-                <div class="space-x-4 mt-30 mb-2">
-                    <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-pencil-line"></i>
-                        Edit
-                    </button>
-
-                    <button class="bg-linear-to-t from-rose-500 to-orange-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-delete-bin-3-line"></i>
-                        Delete
-                    </button>
-                </div>
-            </div>
-
-            <div class="relative border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
-                <div class="uppercase flex items-center justify-center p-6 rounded-b-2xl shadow absolute top-0 w-[40%] bg-linear-to-t from-red-400 to-cyan-500 text-white text-4xl font-bold">
-                    UKG
-                </div>
-                <div class="space-x-4 mt-30 mb-2">
-                    <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-pencil-line"></i>
-                        Edit
-                    </button>
-
-                    <button class="bg-linear-to-t from-rose-500 to-orange-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-delete-bin-3-line"></i>
-                        Delete
-                    </button>
-                </div>
-            </div>
-
-            <div class="relative border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
-                <div class="uppercase flex items-center justify-center p-6 rounded-b-2xl shadow absolute top-0 w-[40%] bg-linear-to-t from-red-400 to-cyan-500 text-white text-4xl font-bold">
-                    1
-                </div>
-                <div class="space-x-4 mt-30 mb-2">
-                    <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-pencil-line"></i>
-                        Edit
-                    </button>
-
-                    <button class="bg-linear-to-t from-rose-500 to-orange-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-delete-bin-3-line"></i>
-                        Delete
-                    </button>
-                </div>
-            </div>
-
-            <div class="relative border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
-                <div class="uppercase flex items-center justify-center p-6 rounded-b-2xl shadow absolute top-0 w-[40%] bg-linear-to-t from-red-400 to-cyan-500 text-white text-4xl font-bold">
-                    2
-                </div>
-                <div class="space-x-4 mt-30 mb-2">
-                    <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-pencil-line"></i>
-                        Edit
-                    </button>
-
-                    <button class="bg-linear-to-t from-rose-500 to-orange-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-delete-bin-3-line"></i>
-                        Delete
-                    </button>
-                </div>
-            </div>
-
-             <div class="relative border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
-                <div class="uppercase flex items-center justify-center p-6 rounded-b-2xl shadow absolute top-0 w-[40%] bg-linear-to-t from-red-400 to-cyan-500 text-white text-4xl font-bold">
-                    LKG
-                </div>
-                <div class="space-x-4 mt-30 mb-2">
-                    <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-pencil-line"></i>
-                        Edit
-                    </button>
-
-                    <button class="bg-linear-to-t from-rose-500 to-orange-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-delete-bin-3-line"></i>
-                        Delete
-                    </button>
-                </div>
-            </div>
-
-            <div class="relative border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
-                <div class="uppercase flex items-center justify-center p-6 rounded-b-2xl shadow absolute top-0 w-[40%] bg-linear-to-t from-red-400 to-cyan-500 text-white text-4xl font-bold">
-                    UKG
-                </div>
-                <div class="space-x-4 mt-30 mb-2">
-                    <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-pencil-line"></i>
-                        Edit
-                    </button>
-
-                    <button class="bg-linear-to-t from-rose-500 to-orange-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-delete-bin-3-line"></i>
-                        Delete
-                    </button>
-                </div>
-            </div>
-
-            <div class="relative border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
-                <div class="uppercase flex items-center justify-center p-6 rounded-b-2xl shadow absolute top-0 w-[40%] bg-linear-to-t from-red-400 to-cyan-500 text-white text-4xl font-bold">
-                    1
-                </div>
-                <div class="space-x-4 mt-30 mb-2">
-                    <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-pencil-line"></i>
-                        Edit
-                    </button>
-
-                    <button class="bg-linear-to-t from-rose-500 to-orange-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-delete-bin-3-line"></i>
-                        Delete
-                    </button>
-                </div>
-            </div>
-
-            <div class="relative border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
-                <div class="uppercase flex items-center justify-center p-6 rounded-b-2xl shadow absolute top-0 w-[40%] bg-linear-to-t from-red-400 to-cyan-500 text-white text-4xl font-bold">
-                    2
-                </div>
-                <div class="space-x-4 mt-30 mb-2">
-                    <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-pencil-line"></i>
-                        Edit
-                    </button>
-
-                    <button class="bg-linear-to-t from-rose-500 to-orange-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-delete-bin-3-line"></i>
-                        Delete
-                    </button>
-                </div>
-            </div>
-
-             <div class="relative border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
-                <div class="uppercase flex items-center justify-center p-6 rounded-b-2xl shadow absolute top-0 w-[40%] bg-linear-to-t from-red-400 to-cyan-500 text-white text-4xl font-bold">
-                    LKG
-                </div>
-                <div class="space-x-4 mt-30 mb-2">
-                    <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-pencil-line"></i>
-                        Edit
-                    </button>
-
-                    <button class="bg-linear-to-t from-rose-500 to-orange-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-delete-bin-3-line"></i>
-                        Delete
-                    </button>
-                </div>
-            </div>
-
-            <div class="relative border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
-                <div class="uppercase flex items-center justify-center p-6 rounded-b-2xl shadow absolute top-0 w-[40%] bg-linear-to-t from-red-400 to-cyan-500 text-white text-4xl font-bold">
-                    UKG
-                </div>
-                <div class="space-x-4 mt-30 mb-2">
-                    <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-pencil-line"></i>
-                        Edit
-                    </button>
-
-                    <button class="bg-linear-to-t from-rose-500 to-orange-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-delete-bin-3-line"></i>
-                        Delete
-                    </button>
-                </div>
-            </div>
-
-            <div class="relative border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
-                <div class="uppercase flex items-center justify-center p-6 rounded-b-2xl shadow absolute top-0 w-[40%] bg-linear-to-t from-red-400 to-cyan-500 text-white text-4xl font-bold">
-                    1
-                </div>
-                <div class="space-x-4 mt-30 mb-2">
-                    <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-pencil-line"></i>
-                        Edit
-                    </button>
-
-                    <button class="bg-linear-to-t from-rose-500 to-orange-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-delete-bin-3-line"></i>
-                        Delete
-                    </button>
-                </div>
-            </div>
-
-            <div class="relative border border-gray-200 p-6 flex flex-col justify-center items-center gap-2 rounded-lg shadow-lg">
-                <div class="uppercase flex items-center justify-center p-6 rounded-b-2xl shadow absolute top-0 w-[40%] bg-linear-to-t from-red-400 to-cyan-500 text-white text-4xl font-bold">
-                    2
-                </div>
-                <div class="space-x-4 mt-30 mb-2">
-                    <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-pencil-line"></i>
-                        Edit
-                    </button>
-
-                    <button class="bg-linear-to-t from-rose-500 to-orange-500 text-white font-medium px-4 py-2 rounded hover:cursor-pointer transition active:scale-95">
-                        <i class="ri-delete-bin-3-line"></i>
-                        Delete
-                    </button>
-                </div>
-            </div>
-                
+        <div class="class-container p-8 bg-white rounded-lg shadow-lg grid grid-cols-4 gap-12">
+            <!-- class container -->
         </div>
     </section>
 
     <article id="drawer" class=" select-none bg-white h-screen fixed top-0 right-0 shadow-[-10px_0px_15px_-3px_rgba(0,0,0,0.1)] py-8 overflow-y-auto" style="width: 0; transition: 0.3s;">
         <div class="flex justify-between items-center border-b border-gray-200 pb-2 px-10 mb-6">
             <h1 class="text-xl font-semibold text-gray-800">Add a new class</h1>
-            <button class="hover:cursor-pointer transition active:scale-95" onclick="closeAdmissionForm()">
+            <button class="hover:cursor-pointer transition active:scale-95" onclick="closeAdmissionForm(true)">
                 <i class="ri-close-circle-line text-2xl text-gray-800"></i>
             </button>
         </div>
@@ -366,7 +163,7 @@
                     type="text"
                     id="class"
                     name="class"
-                    placeholder="KG"
+                    placeholder="Enter class name"
                     class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700"
                     required
                 />
@@ -375,15 +172,15 @@
             <div class="flex flex-col gap-2">
                 <label for="classTeacher" class="text-base font-medium text-gray-600">Class Teacher</label>
                 <select name="classTeacher" id="classTeacher" class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700">
-                    <option value="mr. prashant tiwari">Mr. Prashant Tiwari</option>
-                    <option value="mr. prashant tiwari">Mr. Ashtosh Singh</option>
-                    <option value="mr. prashant tiwari">Mrs. Monika Sharma</option>
+                    <option>Select class teacher</option>
+            
                 </select>
             </div>
 
             <div class="flex flex-col gap-2 col-span-2">
                 <label for="sections" class="text-base font-medium text-gray-600">Sections</label>
                 <select name="sections" id="sections" class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700" required multiple>
+                    <option>Select section</option>
                     <option value="A">A</option>
                     <option value="B">B</option>
                     <option value="C">C</option>
@@ -396,17 +193,15 @@
                     type="number"
                     id="fee"
                     name="fee"
-                    placeholder="950"
+                    placeholder="Enter fee e.g.  550"
                     min="1"
                     class="border py-2 px-4 rounded-md border-gray-400 focus:outline-gray-400 text-gray-600 placeholder-gray-700"
                     required
                 />
             </div>
-
-            <div></div>
             
             <div>
-                <button class="bg-linear-to-t from-sky-500 to-indigo-500 text-md text-white font-medium px-6 py-3 rounded transition active:scale-95 hover:cursor-pointer">
+                <button class=" add-now-btn bg-linear-to-t from-sky-500 to-indigo-500 text-md text-white font-medium px-6 py-3 rounded transition active:scale-95 hover:cursor-pointer">
                     <i class="ri-arrow-right-line"></i>
                     Add now
                 </button>

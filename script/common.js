@@ -10,7 +10,10 @@ const openAdmissionForm = () => {
 }
 
 
-const closeAdmissionForm = () => {
+const closeAdmissionForm = (redirect=false) => {
+    if(redirect){
+        location.reload()
+    }
     drawer.style.width = 0    
 }
 
